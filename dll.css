@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: url('../imags/dlbg.png') no-repeat center center;
+    background: url('./dlbg.png') no-repeat center center;
     background-size: cover;
 }
 
