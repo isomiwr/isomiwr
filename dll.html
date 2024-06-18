@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用户登录</title>
+    <link rel="stylesheet" href="./css/dll.css" />
+</head>
+
+<body>
+    <div style="height: 600px; width: 400px" class="flex column Baise Yy mg8 JZ">
+        <div style="height: 50px; width: 300px; color: rgb(90, 0, 48)" class="zi bold-text yiebian">
+            Welcome to 魈鸟观测站!
+        </div>
+        <div style="height: 200px; width: 300px mg8 Yy">
+            <div class="Baise mg8 xian zi2">
+                <input type="text" placeholder="Username:422240102" />
+            </div>
+            <div class="Baise mg8 xian zi2">
+                <input type="password" placeholder="Password:422240102" />
+            </div>
+        </div>
+        <div class="button" onclick="login()">登录</div>
+        <div class="button" onclick="Side()">注册</div>
+    </div>
+    <script>
+        var box = document.querySelector("div");
+        var clientW = document.documentElement.clientWidth;
+        var clientH = document.documentElement.clientHeight;
+        var boxW = box.offsetWidth;
+        var boxH = box.offsetHeight;
+        box.style.left = (clientW - boxW) / 2 + "px";
+        box.style.top = (clientH - boxH) / 2 + "px";
+
+        function login() {
+            var username = document.querySelector('input[type="text"]').value;
+            var password = document.querySelector('input[type="password"]').value;
+
+            // 添加登录验证，和用户名密码对比
+            if (username === "422240102" && password === "422240102") {
+                alert("登录成功!");
+                // 登录成功后跳转到另一个页面
+                window.location.href = "index.html";
+            } else {
+                alert(
+                    "用户名或密码错误，请重新输入。"
+                );
+            }
+        }
+        function Side() {
+            window.location.href = "dll.html";
+        }
+    </script>
+</body>
+
+</html>
