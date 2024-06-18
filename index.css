@@ -1,0 +1,248 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    height: 2300px;
+    width: 100%;
+    background-color: #caefe3;
+
+}
+
+nav ul li {
+    margin: 0 35px;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    font-weight: 500;
+    font: bolder;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: blue;
+}
+
+nav input[type="checkbox"],
+.menu {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 2%;
+    top: 38%;
+}
+
+.H {
+    height: 760px;
+    width: 100%;
+}
+
+.A {
+    background-color: rgb(83, 169, 140);
+    padding: 33px 0;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: #3e3e3e 3px 2px 10px;
+}
+
+#logo {
+    position: absolute;
+    top: 30px;
+    left: 70%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+
+video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 790px;
+    object-fit: cover;
+    border-radius: 0%;
+    z-index: -1;
+}
+
+.BBB {
+    height: 760px;
+    margin: 10px auto;
+    width: 800px;
+    box-shadow: #919191 3px 2px 10px;
+}
+
+.C {
+    clear: both;
+}
+
+.B,
+.D {
+    height: 350px;
+    text-align: justify;
+    margin-top: 20px;
+    display: flex;
+    padding-top: 20px;
+}
+
+.ebox {
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+    height: 280px;
+    margin-top: 42px;
+}
+
+.sbox {
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin-left: 6%;
+    margin-top: 4%;
+
+}
+
+.fbox {
+    margin-top: 40px;
+    width: 800px;
+    height: 250px;
+    background-color: bisque;
+    border-radius: 8px;
+    margin-left: 2%;
+    padding: 12px;
+    box-shadow: #919191 3px 2px 10px;
+}
+
+h3 {
+    text-align: center;
+}
+
+#xx {
+    width: 200px;
+    height: 280px;
+
+}
+
+#cc {
+    width: 280px;
+    height: 280px;
+}
+
+.E {
+    width: 100%;
+    height: 790px;
+    background: url('../imags/isomi.png') no-repeat center center;
+    background-size: cover;
+    min-height: 790px;
+}
+
+.E>* {
+    margin: 0 auto;
+}
+
+.F {
+    width: 100%;
+    height: 80px;
+    background: #000;
+    position: absolute;
+    bottom: -230%;
+    box-shadow: #5c5c5c 3px 2px 10px;
+}
+
+.F p {
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+
+.F p a {
+    color: #fff;
+}
+
+.F p a:hover,
+.F p a:active {
+    color: #000;
+}
+
+.zi {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.R {
+    background-color: rgb(83, 169, 140);
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    width: 100%;
+    box-shadow: #919191 3px 2px 10px;
+}
+
+/* 音乐播放器样式 */
+.music-player {
+
+    margin: 20px;
+}
+
+.music-player audio {
+    width: 300px;
+    border: 2px solid #53a98c;
+    border-radius: 8px;
+
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+.controls button {
+    background-color: #53a98c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+    box-shadow: #919191 3px 2px 10px;
+}
+
+.controls button:hover {
+    background-color: #3a8675;
+}
+
+@keyframes zqq {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#zqq {
+    animation: zqq 4s linear infinite;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-top: 3%;
+
+}
+
+#qm {
+    width: 80px;
+    height: 20px;
+    position: relative;
+    left: 20%;
+}

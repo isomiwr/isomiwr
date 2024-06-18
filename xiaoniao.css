@@ -1,0 +1,149 @@
+body {
+    background-image: url('./imags/专栏背景.png')no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+
+nav ul li {
+    margin: 0 35px;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    font-weight: 500;
+    font: bolder;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: blue;
+}
+
+nav input[type="checkbox"],
+.menu {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 1%;
+    top: 36%;
+}
+
+.H {
+    height: 800px;
+    width: 100%;
+    /* border: #3e3e3e 1px solid; */
+}
+
+.A {
+    background-color: rgb(83, 169, 140);
+    padding: 33px 0;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: #3e3e3e 3px 2px 10px;
+    line-height: 40px;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+#logo {
+    position: absolute;
+    top: 30px;
+    left: 80%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.H>.a,
+.c,
+.d {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.a {
+    width: 100%;
+    height: 420px;
+    padding-top: 40px;
+    /* border: #3e3e3e 1px solid; */
+}
+
+#X {
+    position: relative;
+    border-radius: 5%;
+    box-shadow: #3e3e3e 2px 2px 12px;
+    width: 380px;
+    height: 250px;
+    border-radius: 5%;
+}
+
+#L {
+    position: relative;
+    border-radius: 5%;
+    box-shadow: #3e3e3e 2px 2px 12px;
+    width: 350px;
+    height: 350px;
+    border-radius: 5%;
+}
+
+#I {
+    position: relative;
+    border-radius: 5%;
+    box-shadow: #3e3e3e 2px 2px 12px;
+    width: 500px;
+    height: 300px;
+    border-radius: 5%;
+}
+
+.c {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    /* border: #3e3e3e 1px solid; */
+}
+
+h3 {
+    margin-right: 10%;
+}
+
+#S {
+    border-radius: 15px;
+    position: relative;
+    box-shadow: #3e3e3e 2px 2px 12px;
+    width: 92%;
+    height: 150px;
+
+}
+
+.F {
+    width: 100%;
+    height: 80px;
+    background: #000;
+    box-shadow: #5c5c5c 3px 2px 10px;
+
+}
+
+.F p {
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    line-height: 80px;
+}
+
+.F p a {
+    color: #fff;
+}
+
+.F p a:hover,
+.F p a:active {
+    color: #000;
+}
