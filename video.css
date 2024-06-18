@@ -4,7 +4,7 @@ body {
     padding: 0;
     margin: 0 auto;
     font-family: "Microsoft YaHei", "Helvetica", simhei, simsun, sans-serif;
-    background: url('../imags/spbg.png') no-repeat center center;
+    background: url('../spbg.png') no-repeat center center;
     background-size: cover;
 }
 
@@ -23,7 +23,7 @@ figcaption {
     height: 460px;
     margin: 0 auto;
     border-radius: 4px;
-    background: #000 url("images/loading.gif") center/300px no-repeat;
+    background: #000 url("./loading.gif") center/300px no-repeat;
     position: relative;
     text-align: center;
 }
