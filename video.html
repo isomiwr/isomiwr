@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魈鸟专场</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/video.css">
+</head>
+
+<body>
+    <figure>
+        <figcaption>视频播放器</figcaption>
+        <div class="player">
+            <video src="./imags/AAA.mp4" id="video"></video>
+            <div class="controls">
+                <a href="#" class="switch fa fa-play" id="playPauseBtn"></a>
+                <div class="progress" id="progress">
+                    <div class="line" id="line"></div>
+                    <div class="bar" id="bar"></div>
+                </div>
+                <div class="timer">
+                    <span class="current" id="currentTime">00:00:00 </span> / <span class="total"
+                        id="totalTime">00:00:00 </span>
+                </div>
+                <a href="#" class="expand fa fa-arrows-alt" id="fullscreenBtn"></a>
+            </div>
+        </div>
+
+    </figure>
+    <div class="J">
+        <button id="JUMP">跳转回首页</button>
+        <button id="JUMP2">跳转到魈鸟专栏</button>
+    </div>
+
+    <!-- 不依赖 jQuery  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('video');
+            var playPauseBtn = document.getElementById('playPauseBtn');
+            var currentTime = document.getElementById('currentTime');
+            var totalTime = document.getElementById('totalTime');
+            var progress = document.getElementById('progress');
+            var bar = document.getElementById('bar');
+            var fullscreenBtn = document.getElementById('fullscreenBtn');
+
+            // 播放/暂停功能
+            playPauseBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (video.paused) {
+                    video.play();
+                    playPauseBtn.classList.remove('fa-play');
+                    playPauseBtn.classList.add('fa-pause');
+                } else {
+                    video.pause();
+                    playPauseBtn.classList.remove('fa-pause');
+                    playPauseBtn.classList.add('fa-play');
+                }
+            });
+
+            // 更新进度条和时间
+            video.addEventListener('timeupdate', function () {
+                var current = video.currentTime;
+                var duration = video.duration;
+                var percent = (current / duration) * 100;
+                bar.style.width = percent + '%';
+                currentTime.textContent = formatTime(current);
+                totalTime.textContent = formatTime(duration);
+            });
+
+            // 进度条拖动功能
+            progress.addEventListener('click', function (e) {
+                var pos = (e.pageX - this.offsetLeft) / this.offsetWidth;
+                video.currentTime = pos * video.duration;
+            });
+
+            // 全屏功能
+            fullscreenBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.mozRequestFullScreen) { // Firefox
+                    video.mozRequestFullScreen();
+                } else if (video.webkitRequestFullscreen) { // Chrome and Safari
+                    video.webkitRequestFullscreen();
+                } else if (video.msRequestFullscreen) { // IE/Edge
+                    video.msRequestFullscreen();
+                }
+            });
+
+            // 格式化时间
+            function formatTime(seconds) {
+                var h = Math.floor(seconds / 3600);
+                var m = Math.floor((seconds % 3600) / 60);
+                var s = Math.floor(seconds % 60);
+                return (h > 0 ? (h < 10 ? "0" + h : h) + ":" : "") + (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+            }
+
+            // 视频加载完后设置总时长
+            video.addEventListener('loadedmetadata', function () {
+                totalTime.textContent = formatTime(video.duration);
+            });
+
+            // 视频播放完成后的重置操作
+            video.addEventListener('ended', function () {
+                playPauseBtn.classList.remove('fa-pause');
+                playPauseBtn.classList.add('fa-play'); // 播放按钮变回播放状态
+                currentTime.textContent = '00:00:00'; // 播放时间重置为 00:00:00
+                video.currentTime = 0; // 视频播放时间重置为 0
+            });
+        });
+        var JUMP = document.getElementById('JUMP');
+        JUMP.addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+        var JUMP2 = document.getElementById('JUMP2');
+        JUMP2.addEventListener('click', function () {
+            window.location.href = 'xiaoniao.html';
+        });
+    </script>
+</body>
+
+</html>
